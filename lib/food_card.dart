@@ -12,7 +12,7 @@ class FoodCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 10.0),
+      margin: EdgeInsets.only(right: 15.0),
       width: 150,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.0),
