@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen>
                     price: 21,
                     cardColor: Color(0xFFFFEAC5),
                     textColor: Color(0xFF786138),
-                    onPressed: (){
+                    onPressed: () {
                       Navigator.pushNamed(context, '/second');
                     },
                   ),
@@ -162,57 +162,73 @@ class _HomeScreenState extends State<HomeScreen>
                   ListView(
                     children: [
                       FoodTab(
-                          source: 'images/pizza.png',
-                          text: 'Cheese pizza',
-                          price: 21,
-                          rating: 4),
+                        source: 'images/pizza.png',
+                        text: 'Cheese pizza',
+                        price: 21,
+                        rating: 4,
+                        color: Color(0xFFFFE4E0),
+                      ),
                       FoodTab(
-                          source: 'images/hot dog.png',
-                          text: 'Hot dog',
-                          price: 15,
-                          rating: 3)
+                        source: 'images/hot dog.png',
+                        text: 'Hot dog',
+                        price: 15,
+                        rating: 3,
+                        color: Color(0xFFFFE4E0),
+                      )
                     ],
                   ),
                   ListView(
                     children: [
                       FoodTab(
-                          source: 'images/pizza.png',
-                          text: 'Cheese pizza',
-                          price: 21,
-                          rating: 4),
+                        source: 'images/pizza.png',
+                        text: 'Cheese pizza',
+                        price: 21,
+                        rating: 4,
+                        color: Color(0xFFFFE4E0),
+                      ),
                       FoodTab(
-                          source: 'images/hot dog.png',
-                          text: 'Hot dog',
-                          price: 15,
-                          rating: 3)
+                        source: 'images/hot dog.png',
+                        text: 'Hot dog',
+                        price: 15,
+                        rating: 3,
+                        color: Color(0xFFFFE4E0),
+                      )
                     ],
                   ),
                   ListView(
                     children: [
                       FoodTab(
-                          source: 'images/pizza.png',
-                          text: 'Cheese pizza',
-                          price: 21,
-                          rating: 4),
+                        source: 'images/pizza.png',
+                        text: 'Cheese pizza',
+                        price: 21,
+                        rating: 4,
+                        color: Color(0xFFFFE4E0),
+                      ),
                       FoodTab(
-                          source: 'images/hot dog.png',
-                          text: 'Hot dog',
-                          price: 15,
-                          rating: 3)
+                        source: 'images/hot dog.png',
+                        text: 'Hot dog',
+                        price: 15,
+                        rating: 3,
+                        color: Color(0xFFFFE4E0),
+                      )
                     ],
                   ),
                   ListView(
                     children: [
                       FoodTab(
-                          source: 'images/pizza.png',
-                          text: 'Cheese pizza',
-                          price: 21,
-                          rating: 4),
+                        source: 'images/pizza.png',
+                        text: 'Cheese pizza',
+                        price: 21,
+                        rating: 4,
+                        color: Color(0xFFFFE4E0),
+                      ),
                       FoodTab(
-                          source: 'images/hot dog.png',
-                          text: 'Hot dog',
-                          price: 15,
-                          rating: 3)
+                        source: 'images/hot dog.png',
+                        text: 'Hot dog',
+                        price: 15,
+                        rating: 3,
+                        color: Color(0xFFFFE4E0),
+                      )
                     ],
                   ),
                 ],

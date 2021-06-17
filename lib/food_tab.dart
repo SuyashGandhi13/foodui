@@ -6,9 +6,10 @@ class FoodTab extends StatelessWidget {
   final String text;
   final double rating;
   final int price;
+  final Color color;
 
   FoodTab(
-      {@required this.source, @required this.text, this.rating, this.price});
+      {@required this.source, @required this.text, this.rating, this.price,this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class FoodTab extends StatelessWidget {
               width: 75,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                color: Color(0xFFFFE4E0),
+                color: color,
               ),
               child: Center(
                 child: Image.asset(

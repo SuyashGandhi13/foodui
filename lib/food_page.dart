@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:foodui/featured.dart';
 
 class FoodPage extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class _FoodPageState extends State<FoodPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.fromLTRB(15, 15, 0, 15),
+        padding: EdgeInsets.fromLTRB(15, 15, 0, 0),
         child: ListView(
           children: [
             Padding(
@@ -168,17 +169,19 @@ class _FoodPageState extends State<FoodPage> {
                 ),
                 Container(
                   height: 60,
-                  width: MediaQuery.of(context).size.width*.65,
+                  width: MediaQuery.of(context).size.width * .65,
                   decoration: BoxDecoration(
                     color: Color(0xFFFE7D6A),
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(10),bottomLeft: Radius.circular(10.0)),
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        bottomLeft: Radius.circular(10.0)),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
                         height: 40,
-                        width: MediaQuery.of(context).size.width*.3,
+                        width: MediaQuery.of(context).size.width * .3,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10.0),
@@ -186,17 +189,81 @@ class _FoodPageState extends State<FoodPage> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Icon(Icons.add,color: Color(0xFFFE7D6A),),
-                            Text('2',style: TextStyle(color: Color(0xFFFE7D6A)),),
-                            Icon(Icons.remove,color: Color(0xFFFE7D6A),)
+                            Icon(
+                              Icons.add,
+                              color: Color(0xFFFE7D6A),
+                            ),
+                            Text(
+                              '2',
+                              style: TextStyle(color: Color(0xFFFE7D6A)),
+                            ),
+                            Icon(
+                              Icons.remove,
+                              color: Color(0xFFFE7D6A),
+                            )
                           ],
                         ),
                       ),
-                      TextButton(onPressed: (){}, child: Text('Add to cart',style: TextStyle(color: Colors.white,fontSize: 15),))
+                      TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Add to cart',
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                          ))
                     ],
                   ),
                 )
               ],
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10.0),
+              child: Text(
+                'FEATURED',
+                style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20),
+              ),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height - 460,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Column(
+                    children: [
+                      FeaturedFood(
+                        source: 'images/cheese.png',
+                        text: 'Sweet cheese',
+                        color: Color(0xFFFCD7F7),
+                        price: 11,
+                      ),
+                      FeaturedFood(
+                        source: 'images/popcorn.png',
+                        text: 'Sweet popcorn',
+                        color: Color(0xFFFEED6CF),
+                        price: 6,
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      FeaturedFood(
+                        source: 'images/taco.png',
+                        text: 'Taco',
+                        color: Color(0xFFC4E2FD),
+                        price: 12,
+                      ),
+                      FeaturedFood(
+                        source: 'images/sandwich.png',
+                        text: 'Cheese Sandwich',
+                        color: Color(0xFFC5F6C5),
+                        price: 8,
+                      )
+                    ],
+                  ),
+                ],
+              ),
             )
           ],
         ),
