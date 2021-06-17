@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen>
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Icon(
-                    Icons.menu,
+                    Icons.sort,
                     color: Colors.black,
                     size: 40.0,
                   ),
@@ -110,6 +110,9 @@ class _HomeScreenState extends State<HomeScreen>
                     price: 21,
                     cardColor: Color(0xFFFFEAC5),
                     textColor: Color(0xFF786138),
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/second');
+                    },
                   ),
                   FoodCard(
                     source: 'images/french fry.png',

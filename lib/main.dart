@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodui/food_page.dart';
 import 'package:foodui/home_screen.dart';
 
 void main() {
@@ -10,8 +11,11 @@ class FoodUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: HomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/':(context)=>HomeScreen(),
+        '/second':(context)=>FoodPage(),
+      },
     );
   }
 }
